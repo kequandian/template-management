@@ -5,6 +5,11 @@ import { Icon } from 'antd';
 import { inject } from '@/utils/inject';
 import logo from '@/assets/logo.png';
 
+import { endpointSet } from 'zero-element';
+
+const { set: setEndpoint } = endpointSet;
+setEndpoint("http://127.0.0.1:8080");
+
 inject('global', {
   name: 'ZERO_projectName',
   logo,
@@ -19,6 +24,6 @@ inject('global', {
     // },
   ],
   copyright: <Fragment>
-    Copyright <Icon type="copyright" /> 2018 zero-element
+    Copyright <Icon type="copyright" /> 2019 zero-element
   </Fragment>,
 });
