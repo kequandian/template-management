@@ -1,12 +1,9 @@
 import { routerRedux } from 'dva/router';
 import { stringify } from 'qs';
-import { requestSet, tokenSet } from 'zero-element';
+import { query, post } from 'zero-element/lib/utils/request';
 import { setAuthority } from '@/utils/authority';
 import { getPageQuery } from '@/utils/utils';
 import { reloadAuthorized } from '@/utils/Authorized';
-
-const { query, post } = requestSet;
-const { saveToken, removeToken } = tokenSet;
 
 export default {
   namespace: 'login',
@@ -17,18 +14,12 @@ export default {
 
   effects: {
     *login({ payload }, { call, put }) {
-      removeToken();
+      // TODO remove token
       const rst = yield call(post, '/api/oauth/login', payload);
       // Login successfully
       if (rst && rst.code === 200) {
         const { data } = rst;
-        saveToken({
-          account: payload.account,
-          token: data.accessToken,
-          avatar: data.avatar,
-          perms: data.perms || [],
-          remember: payload.autoLogin
-        });
+        // TODO save token
         yield put({
           type: 'changeLoginStatus',
           payload: {
@@ -45,7 +36,7 @@ export default {
     },
 
     *logout(_, { put }) {
-      removeToken();
+      // TODO remove token
       yield put({
         type: 'changeLoginStatus',
         payload: {

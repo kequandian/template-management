@@ -1,12 +1,17 @@
 import React, { PureComponent } from 'react';
 import { FormattedMessage, formatMessage } from 'umi/locale';
 import { Spin, Tag, Menu, Icon, Dropdown, Avatar } from 'antd';
-import { requestSet, tokenSet } from 'zero-element';
 import moment from 'moment';
 import groupBy from 'lodash/groupBy';
 // import SelectLang from '../SelectLang';
 import styles from './index.less';
-const { getAvatar, getAccount } = tokenSet;
+
+function getAvatar() {
+  return '';
+}
+function getAccount() {
+  return 'admin';
+}
 
 export default class GlobalHeaderRight extends PureComponent {
   getNoticeData() {
@@ -92,12 +97,12 @@ export default class GlobalHeaderRight extends PureComponent {
             </span>
           </Dropdown>
         ) : (
-          <div>
-            <Spin size="small" style={{ marginLeft: 8, marginRight: 8 }} />
-            <Dropdown overlay={reloginMenu}>
+            <div>
+              <Spin size="small" style={{ marginLeft: 8, marginRight: 8 }} />
+              <Dropdown overlay={reloginMenu}>
                 <span>loading……</span>
               </Dropdown>
-          </div>
+            </div>
           )}
         {/* <SelectLang className={styles.action} /> */}
       </div>

@@ -1,6 +1,6 @@
 {
   "name": "ZERO_projectName",
-  "version": "0.0.3",
+  "version": "0.1.0-beta.1",
   "description": "zero-element: ZERO_projectName",
   "private": true,
   "scripts": {
@@ -14,11 +14,12 @@
     "antd": "^3.10.0",
     "bizcharts": "^3.2.2",
     "bizcharts-plugin-slider": "^2.0.3",
+    "braft-editor": "^2.1.32",
     "classnames": "^2.2.6",
     "dva": "^2.4.0",
     "enquire-js": "^0.2.1",
     "hash.js": "^1.1.5",
-    "kako": "~0.3.0",
+    "layout-flex": "github:kequandian/layout-flex",
     "lodash": "^4.17.10",
     "lodash-decorators": "^6.0.0",
     "memoize-one": "^4.0.0",
@@ -30,14 +31,18 @@
     "prop-types": "^15.5.10",
     "qs": "^6.5.2",
     "rc-animate": "^2.4.4",
-    "react": "^16.8.1",
+    "react": "^16.8.6",
     "react-container-query": "^0.11.0",
+    "react-contextmenu": "^2.11.0",
     "react-copy-to-clipboard": "^5.0.1",
+    "react-dnd": "^7.4.5",
+    "react-dnd-html5-backend": "^7.4.4",
     "react-document-title": "^2.0.3",
-    "react-dom": "^16.8.1",
+    "react-dom": "^16.8.6",
     "react-fittext": "^1.0.0",
     "react-router-dom": "^4.3.1",
-    "zero-element": "0.x"
+    "zero-element": "github:kequandian/zero-element#1.0",
+    "zero-element-antd": "github:kequandian/zero-element-antd"
   },
   "devDependencies": {
     "@types/react": "^16.4.16",
@@ -48,12 +53,9 @@
     "cross-env": "^5.1.1",
     "cross-port-killer": "^1.0.1",
     "enzyme": "^3.7.0",
+    "fs-extra": "^7.0.1",
     "gh-pages": "^2.0.1",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^3.9.3",
-    "gulp-concat": "^2.6.1",
-    "gulp-ignore": "^2.0.2",
+    "localeval": "^15.2.3",
     "merge-umi-mock-data": "^0.0.3",
     "mockjs": "^1.0.1-beta3",
     "umi": "^2.2.1",
@@ -61,7 +63,7 @@
     "umi-plugin-react": "^1.2.0"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=8.0.0"
   },
   "browserslist": [
     "> 1%",

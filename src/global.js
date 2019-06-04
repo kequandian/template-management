@@ -5,10 +5,11 @@ import { Icon } from 'antd';
 import { inject } from '@/utils/inject';
 import logo from '@/assets/logo.png';
 
-import { endpointSet } from 'zero-element';
+import ZEle_antd from 'zero-element-antd';
 
-const { set: setEndpoint } = endpointSet;
-setEndpoint("http://127.0.0.1:8080");
+// import { set as setEndpoint } from 'zero-element/lib/utils/request/endpoint';
+
+// setEndpoint("http://127.0.0.1:8080");
 
 inject('global', {
   name: 'ZERO_projectName',
